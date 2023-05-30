@@ -39,7 +39,7 @@ class _SplashAnimationScreenState extends State<SplashAnimationScreen>
     _animationController.forward(); // 애니메이션 시작
 
     // 3초 후에 AuthScreen으로 이동
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => AuthGate()),
@@ -64,7 +64,7 @@ class _SplashAnimationScreenState extends State<SplashAnimationScreen>
             child: FractionalTranslation(
               translation: _slideAnimation.value,
               child: Center(
-                child: Image.asset('Logo.png'), // 스플래시 이미지 경로
+                child: Image.asset('assets/Logo.png'), // 스플래시 이미지 경로
               ),
             ),
           );
